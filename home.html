@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>
+		Attendance Management
+	</title>
+	<script type="text/javascript">
+        function playCancel(){
+            var a = document.getElementById("cancel");
+            a.play();
+        }
+        function playHover(){
+            var a = document.getElementById("hover");
+            a.play();
+        }
+        function playClick(){
+            var a = document.getElementById("click");
+            a.play();
+        }
+        window.onload = function(){
+        	playClick();
+        }
+    </script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class = "main">
+	<audio id="click">
+        <source src="select.wav" type="audio/wav">
+    </audio>
+    <audio id="hover">
+        <source src="hover.wav" type="audio/wav">
+    </audio>
+    <audio id="cancel">
+        <source src="cancel.wav" type="audio/wav">
+    </audio>
+	<div class= "heading big">
+		Welcome To Attendance Portal
+	</div>
+	<hr class="divide">
+	<br>
+	<table width=100% border="0px">
+		<tr height="100">
+			<td width="33%" height="200">
+				<a href="loginAdmin.html">
+					<button onmouseover="playHover()" class="craftyButton">ADMINISTRATOR</button>
+				</a>
+			</td>
+			<td width="33%" height="200">
+				<a href="loginFaculty.html">
+					<button onmouseover="playHover()" class="craftyButton">FACULTY</button>
+				</a>
+			</td>
+			<td width="33%" height="200">
+				<a href="loginStudent.html">
+					<button onmouseover="playHover()" class="craftyButton">STUDENT</button>
+				</a>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

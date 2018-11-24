@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title>
+		LOGIN WEBPAGE FACULTY
+	</title>
+	<link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        function playCancel(){
+            var a = document.getElementById("cancel");
+            a.play();
+        }
+        function playHover(){
+            var a = document.getElementById("hover");
+            a.play();
+        }
+        function playClick(){
+            var a = document.getElementById("click");
+            a.play();
+        }
+        window.onload = function(){
+            playClick();
+        }
+    </script>
+</head>
+<body class="faculty">
+    <audio id="click">
+        <source src="select.wav" type="audio/wav">
+    </audio>
+    <audio id="hover">
+        <source src="hover.wav" type="audio/wav">
+    </audio>
+    <audio id="cancel">
+        <source src="cancel.wav" type="audio/wav">
+    </audio>
+	<center>
+		<h3 class="heading small">
+            Faculty LogIn
+        </h3>
+        <br><br><br><br><br>
+        <div class="threeTab">
+            <div></div>
+            <div class="loginBox">
+                <a href="home.html">
+                    <button style=" position: absolute; box-sizing: content-box; margin-left: 40%; background-color: transparent; height: 30px; width: 30px; border-color: transparent; border-width: 0%; font-size: 15px; font-family: Arial;" onmouseover="playCancel()">
+                        X
+                    </button>
+                </a>
+                <form name="faculty" action="loginFaculty.php" method="POST">
+                    <br><br>
+                    <label class="loginLabel" for="name" id="lname">Faculty ID</label><br>
+                    <input class="loginInput" type="number" name="id" id="id"><br><br>
+                    <br><br>
+                    <label class="loginLabel" for="name" id="lpass">Password</label><br>
+                    <input class="loginInput" type="password" name="pass" id="pass"><br><br>
+                    <br><br>
+                    <input class="loginButton" type="submit" value="SIGN IN" onmouseover="playHover()">
+                    <input class="loginButton" type="reset" value="RESET" onmouseover="playHover()">
+                </form>
+            </div>
+            <div></div>
+        </div>
+	</center>
+</body>
+</html>
