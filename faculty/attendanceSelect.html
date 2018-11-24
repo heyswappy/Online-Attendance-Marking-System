@@ -1,0 +1,103 @@
+<html>
+<head>
+	<title>
+		MODIFY ATTENDANCE
+	</title>
+	<link rel="stylesheet" href="../style.css">
+	<script type="text/javascript">
+		function processQueryFun(){
+			var f = document.getElementById("attendanceSelect");
+			f.action = "fetchAttend.php";
+			f.submit();
+			return;
+		}
+		function createAttend(){
+			var f = document.getElementById("attendanceSelect");
+			f.action = "createAttend.php";
+			f.submit();
+			return;
+		}
+		function playCancel(){
+			var a = document.getElementById("cancel");
+			a.play();
+		}
+		function playHover(){
+			var a = document.getElementById("hover");
+			a.play();
+		}
+		function playClick(){
+			var a = document.getElementById("click");
+			a.play();
+		}
+		window.onload = function(){
+			var today = new Date();
+			var dd = today.getDate();
+			var mm = today.getMonth()+1;
+			var yyyy = today.getFullYear();
+			if(dd<10) {
+			    dd = '0'+dd;
+			} 
+
+			if(mm<10) {
+			    mm = '0'+mm;
+			} 
+			today = yyyy + '-' + mm + '-' + dd;
+			var d = document.getElementById("date");
+			d.value = today;
+			playClick();
+		}
+	</script>
+</head>
+<body class="faculty" style="color: #36413E !important;">
+	<audio id="click">
+		<source src="../select.wav" type="audio/wav">
+	</audio>
+	<audio id="hover">
+		<source src="../hover.wav" type="audio/wav">
+	</audio>
+	<audio id="cancel">
+		<source src="../cancel.wav" type="audio/wav">
+	</audio>
+
+	<div class="blurTop">
+	</div>
+
+	<div class="selectTop">
+	<h1 style="font-family: Arial;"> MODIFY ATTENDANCE </h1>
+		<form width="100%" name = "attendanceSelect" id = "attendanceSelect" method = "POST" action = "" target = "_self">
+			<table width="98%" border="0px">
+			<tr>
+				<td width="15%">
+					<input style="width: 100%; margin-top: 6px;" value = "" class="selectCal" type = "date" name = "date" id = "date" onmouseover="playHover()">
+				</td>
+				<td width="10%">
+					<select style="width: 100%; margin-top: 6px;" class="selectBatch" name="batch" id = "batch" onmouseover="playHover()">
+						
+					</select>
+				</td>
+				<td width="10%">
+					<input style="width: 100%;" class="selectButton" type = "button" value = "Create" name = "create" id = "create" onmouseover="playHover()" onclick = "createAttend()">
+				</td>
+				<td width="10%">
+					<input style="width: 100%;" class="selectButton" type = "button" value = "Process" name = "processQuery" id = "processQ" onmouseover="playHover()" onclick = "processQueryFun()">
+				</td>
+				<td width="25%">
+				</td>
+				<td width="10%">
+					<a href="passwordForm.php">
+					<button style="width: 100%;" class="selectButton" style="font-size: 18px; width: 100%;" type = "button" onmouseover="playHover()">PASSWORD</button>
+				</a>
+				<td width="10%">
+					<a href="profile.php">
+					<button style="width: 100%;" class="selectButton" style="font-size: 18px; width: 100%;" type = "button" onmouseover="playHover()">PROFILE</button>
+				</a>
+				<td width="10%">
+					<a href="logout.php">
+					<button style="width: 100%;" class="selectButton" style="font-size: 18px; width: 100%;" type = "button" onmouseover="playCancel()">LOGOUT</button>
+				</a>
+				</td>
+		</table>
+		</form>
+	</div>
+</body>
+</html>
