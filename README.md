@@ -8,5 +8,5 @@ Web System to Mark the Attendance of Students
 3. Run
 
 # NOTE
-The app uses some sounds which have been taken from the popular game Monument Valley By usTwo games.
+The system uses some sounds which have been taken from the popular game Monument Valley By usTwo games.
 Use them cautiously!
