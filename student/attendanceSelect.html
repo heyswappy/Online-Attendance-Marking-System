@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title>
+		ACCESS ATTENDANCE
+	</title>
+    <link rel="stylesheet" href="../style.css">
+	<script type="text/javascript">
+		function processQueryFun(){
+			var f = document.getElementById("attendanceSelect");
+			f.action = "fetchAttend.php";
+			f.submit();
+			return;
+		}
+		function createAttend(){
+			var f = document.getElementById("attendanceSelect");
+			f.action = "createAttend.php";
+			f.submit();
+			return;
+		}
+		function playCancel(){
+			var a = document.getElementById("cancel");
+			a.play();
+		}
+		function playHover(){
+			var a = document.getElementById("hover");
+			a.play();
+		}
+		function playClick(){
+			var a = document.getElementById("click");
+			a.play();
+		}
+		window.onload = function(){
+			playClick();
+		}
+	</script>
+</head>
+<body class="student">
+	<audio id="click">
+		<source src="../select.wav" type="audio/wav">
+	</audio>
+	<audio id="hover">
+		<source src="../hover.wav" type="audio/wav">
+	</audio>
+	<audio id="cancel">
+		<source src="../cancel.wav" type="audio/wav">
+	</audio>
+	<div class="heading" style="font-size: 50px;"> VIEW ATTENDANCE </div>
+	<form width="100%" name = "attendanceSelect" id = "attendanceSelect" method = "POST" action = "fetchAttend.php" target = "_self">
+		<table width="98%" border="0px">
+			<tr>
+				<td width="20%">
+					<select style="width: 100%; margin-top: 6px; " class="selectBatch" name="subject" id = "subject" onmouseover="playHover()">
+						
+					</select>
+				</td>
+				<td width="10%">
+					<input style="width: 100%;" class="selectButton" type = "submit" value = "Show" name = "show" id = "show" onmouseover="playHover()">
+				</td>
+				<td width="30%">
+				</td>
+				<td width="10%">
+					<a href="analyse.php">
+						<button class="selectButton" style="font-size: 18px; width: 100%;" type = "button" onmouseover="playHover()">ANALYSE</button>
+					</a>
+				</td>
+				<td width="10%">
+					<a href="passwordForm.php">
+						<button class="selectButton" style="font-size: 18px; width: 100%;" type = "button" onmouseover="playHover()">PASSWORD</button>
+					</a>
+				</td>
+				<td width="10%">
+					<a href="profile.php">
+						<button class="selectButton" style="font-size: 18px; width: 100%;" type = "button" onmouseover="playHover()">PROFILE</button>
+					</a>
+				</td>
+				<td width="10%">
+					<a href="logout.php">
+						<button class="selectButton" style="font-size: 18px; width: 100%;" type = "button" onmouseover="playCancel()">LOGOUT</button>
+					</a>
+				</td>
+		</table>
+	</form>
+</body>
+</html>
