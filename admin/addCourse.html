@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>
+		ADD COURSE TO DATABASE
+	</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body class="admin">
+	<div class="heading small"><center>ADD NEW COURSE<center></div>
+	<form name="addCourse" action="addCourse.php" method="POST">
+		<table style="margin-left: auto; margin-right: auto;"  width="95%" border="0px">
+			<tr>
+				<td width="20%">
+					<label class="inputLabel" for="id">COURSE ID</label>
+				</td>
+				<td>
+					<input class="loginInput" type="numer" name="id" id="id"><br><br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label class="inputLabel" for="name">COURSE NAME</label>
+				</td>
+				<td>
+					<input class="loginInput" type="text" name="name" id="name"><br><br>
+				</td>
+			</tr>
+
+			<tr>
+				<td align="center">
+					<input style="width: 150px;" class="loginButton" type="submit" value="ADD COURSE">
+				</td align="center">
+				<td align="center">
+					<input style="width: 150px;" class="loginButton" type="reset" value="Reset">
+					<a href="dashboard.html">
+						<input style="width: 150px;" class="loginButton" type="button" value="Return">
+					</a>
+				</td align="center">
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

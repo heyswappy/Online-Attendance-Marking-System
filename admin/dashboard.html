@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>DASHBOARD ADMINISTRATOR</title>
+	<script type="text/javascript">
+        function playCancel(){
+            var a = document.getElementById("cancel");
+            a.play();
+        }
+        function playHover(){
+            var a = document.getElementById("hover");
+            a.play();
+        }
+        function playClick(){
+            var a = document.getElementById("click");
+            a.play();
+        }
+        window.onload = function(){
+            playClick();
+        }
+    </script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="admin">
+	<audio id="click">
+        <source src="../select.wav" type="audio/wav">
+    </audio>
+    <audio id="hover">
+        <source src="../hover.wav" type="audio/wav">
+    </audio>
+    <audio id="cancel">
+        <source src="../cancel.wav" type="audio/wav">
+    </audio>
+	<div class="heading small">WELCOME ADMINISTRATOR</div><hr><br><br>
+	<table width="100%" border="0px">
+		<tr>
+			<td width="33%"><center>
+			<a href = "addStudent.html">
+				<button style="width: 65%;" class="loginButton" onmouseover="playHover()">ADD STUDENT</button>
+			</a><br><br></center></td>
+			<td width="33%"><center>
+			<a href = "addFaculty.html">
+				<button style="width: 65%;" class="loginButton" onmouseover="playHover()">ADD FACULTY</button>
+			</a><br><br></center></td>
+			<td width="33%"><center>
+			<a href = "addAdministrator.html">
+				<button style="width: 65%;" class="loginButton" onmouseover="playHover()">ADD ADMINISTRATOR</button>
+			</a><br><br></center></td>
+		</tr>
+		<tr>
+			<td width="33%"><center>
+			<a href = "addBatch.html">
+				<button style="width: 65%;" class="loginButton" onmouseover="playHover()">ADD BATCH</button>
+			</a><br><br></center></td>
+			<td width="33%"><center>
+			<a href = "addCourse.html">
+				<button style="width: 65%;" class="loginButton" onmouseover="playHover()">ADD COURSE</button>
+			</a><br><br></center></td>
+			<td width="33%"><center>
+			<a href = "password.html">
+				<button style="width: 65%;" class="loginButton" onmouseover="playHover()">CHANGE PASSWORD</button>
+			</a><br><br></center></td>
+		</tr>
+	</table>
+	<center>
+	<a href = "logout.php">
+		<button style="width: 88%;" class="loginButton" onmouseover="playCancel()">LOGOUT</button>
+	</a><br><br></center>
+</body>
+</html>
